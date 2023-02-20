@@ -19,7 +19,6 @@ const Navbar = () => {
 
   useEffect(()=>{
     let menu=document.querySelector(".catMenu");
-    console.log("hola");
     if(catShow){
       menu.style.display="grid";
     }
