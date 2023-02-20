@@ -1,0 +1,17 @@
+.NavSup{
+    padding-top: 5px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+    grid-template-areas: 
+    "logo search cart";
+    padding-left: 50px;
+    grid-area:sup;
+    align-items: center;
+}
+
+.dynastyLogo{
+    grid-area: logo;
+    width: 100px;
+    height: 60px;
+}

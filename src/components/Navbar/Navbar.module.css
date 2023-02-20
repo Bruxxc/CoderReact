@@ -1,0 +1,44 @@
+.Navbar{
+    background-color: #F2BB05;
+    font-weight: 700;
+    margin: 0;
+    height: 110px;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    grid-template-rows: 4fr 3fr;
+    grid-template-areas: 
+    "sup sup"
+    "op user";
+    color:aliceblue;
+}
+
+
+.opciones{
+    display: flex;
+    list-style: none;
+    width: 400px;
+    justify-content: space-around;
+    grid-area: op;
+    padding-left: 45px;
+}
+
+.user{
+    grid-area:user;
+    display: flex;
+    width: 180px;
+    justify-content: space-around;
+    list-style: none;
+    justify-self: center;
+    padding: 0;
+}
+
+li:hover{
+    cursor:pointer;
+    color:#D74E09;
+}
+
+.displayArrow{
+    position: absolute;
+    justify-self: center;
+    align-self: flex-end;
+}

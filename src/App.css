@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.principalDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  background-color: #F0F0C9;
+  min-height: 90vh;
+}
+
+
+.catMenu{
+  position: absolute;
+  list-style:none;
+  background-color: rgba(51,51,51,.9);
+  width: 150px;
+  margin-top: 4px;
+}
+
+.catMenu li{
+  padding-left: 10px;
+}
+
+.catMenu li:hover{
+  background-color: #2780c0;
+  color:aliceblue;
+}
+
+
+.catMenuParent:hover{
+  color:aliceblue;
+}
+
+.fixHover{
+  display: grid;
+  height: 40px;
+}
+
+.fixHover:hover{
+  color:#D74E09;
+}
+
+main{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}

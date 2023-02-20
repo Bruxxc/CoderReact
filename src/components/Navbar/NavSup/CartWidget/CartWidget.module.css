@@ -1,0 +1,38 @@
+.CartWidget{
+    width: 60px;
+    height: 60px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-area:cart;
+    justify-self: center;
+    padding-right: 20px;
+}
+
+.CartWidget:hover{
+    color:#D74E09;
+    cursor: pointer;
+}
+
+.sCart{
+    align-self: flex-end;
+    padding-right: 5px;
+    width: 40px;
+    height: 40px;
+
+}
+
+
+
+.contador{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 25px;
+    color:aliceblue;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: grid;
+    background-color: rgb(209, 15, 15);
+    justify-items: center;
+}

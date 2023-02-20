@@ -1,0 +1,37 @@
+.Buscador{
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    width: 80%;
+    justify-self: center;
+    align-self: flex-end;
+    box-shadow: 0px 0px 2px black;
+    grid-area:search;
+}
+
+.Buscador input{
+    border: none;
+    margin-left: 1%;
+    width: 89%;
+    height: 80%;
+}
+
+.Buscador input::placeholder{
+    color:rgb(206, 199, 199);
+}
+
+.Buscador input:focus{
+    outline: #2780c0 solid 2px;
+}
+
+.searchLogo{
+    width: 10%;
+    height: 35px;
+    color:grey;
+}
+
+.searchLogo:hover{
+    color:#D74E09;
+}
