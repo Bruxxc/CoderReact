@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar/Navbar'
-import ProductCard from './components/ProductCard/ProductCard'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="principalDiv">
       <Navbar></Navbar>
       <main>
-        <ProductCard />
+        <ItemListContainer greeting="hola!" />
       </main>
     </div>
   )

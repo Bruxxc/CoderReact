@@ -35,7 +35,6 @@
     align-items: start;
 }
 
-.ProductCard h3{
-}
-.ProductCard h5{
+.greeting{
+    color: red;
 }

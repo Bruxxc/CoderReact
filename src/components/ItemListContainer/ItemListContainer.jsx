@@ -1,9 +1,9 @@
-import styles from "./ProductCard.module.css"
+import styles from "./ItemListContainer.module.css"
 import {AiOutlineDropbox} from "react-icons/ai"
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-const ProductCard = (producto) => {
+const ItemListContainer = (props) => {
   return (
     <div className={styles.ProductCard}>
       
@@ -11,9 +11,9 @@ const ProductCard = (producto) => {
         <AiOutlineDropbox className={styles.defBox}></AiOutlineDropbox>
         </div>
 
+
         <div className={styles.productInfoContainer}>
-          <h3>producto.precio</h3>
-          <h5>producto.nombre</h5>
+          <p className={styles.greeting}>{props.greeting}</p>
           <Button variant="contained" startIcon={<AddShoppingCartIcon />}>Comprar</Button>
         </div>
 
@@ -21,4 +21,4 @@ const ProductCard = (producto) => {
   )
 }
 
-export default ProductCard
+export default ItemListContainer
