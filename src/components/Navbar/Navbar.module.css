@@ -12,6 +12,9 @@
     color:aliceblue;
 }
 
+.Navbar a{
+    color:aliceblue;
+}
 
 .opciones{
     display: flex;

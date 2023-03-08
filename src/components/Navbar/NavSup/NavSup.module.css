@@ -15,3 +15,7 @@
     width: 100px;
     height: 60px;
 }
+
+.dynastyLogo:hover{
+    filter: brightness(150%);
+}

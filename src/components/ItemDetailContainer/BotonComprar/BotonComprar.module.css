@@ -1,0 +1,17 @@
+.comprarButton{
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+    background:#2780c0;
+    font-size: 17px;
+    font-weight:600;
+    line-height: 44px;
+    height: 44px;
+    border-radius: 3px;
+    border:none;
+}
+
+.comprarButton:hover{
+    filter: brightness(110%);
+    cursor: pointer;
+}

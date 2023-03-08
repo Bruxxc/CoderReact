@@ -1,23 +1,24 @@
 import styles from "./ItemListContainer.module.css"
-import {AiOutlineDropbox} from "react-icons/ai"
-import Button from '@mui/material/Button';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-const ItemListContainer = (props) => {
+import ProductCard from "./ProductCard/ProductCard";
+
+const ItemListContainer = ({productos}) => {
+  
+
   return (
-    <div className={styles.ProductCard}>
-      
-        <div className={styles.productImgContainer}> 
-        <AiOutlineDropbox className={styles.defBox}></AiOutlineDropbox>
-        </div>
-
-
-        <div className={styles.productInfoContainer}>
-          <p className={styles.greeting}>{props.greeting}</p>
-          <Button variant="contained" startIcon={<AddShoppingCartIcon />}>Comprar</Button>
-        </div>
+   <div className={styles.ItemListContainer}>
+    <h1>{productos[0].category}</h1>
+    <div className={styles.ProductList}>
+    <div className={styles.ProductListSub}>
+      {productos.map((producto)=>{
+            return<ProductCard key={producto.id} producto={producto}/>
+        })
+        }
 
     </div>
+
+    </div>
+   </div>
   )
 }
 

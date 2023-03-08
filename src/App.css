@@ -3,13 +3,17 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+  color:#2780c0;
+}
 .principalDiv{
   display: flex;
   flex-direction: column;
 }
 
 main{
-  background-color: #F0F0C9;
+  background-color: #f3f3ee;
   min-height: 90vh;
 }
 
@@ -47,6 +51,6 @@ main{
 
 main{
   display: grid;
-  align-items: center;
   justify-items: center;
+  font-family: 'Righteous', cursive;
 }

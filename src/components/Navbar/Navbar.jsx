@@ -1,7 +1,8 @@
-import { useState,useEffect } from "react"
-import styles from "./Navbar.module.css"
-import NavSup from "./NavSup/NavSup"
+import { useState,useEffect } from "react";
+import styles from "./Navbar.module.css";
+import NavSup from "./NavSup/NavSup";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   
@@ -35,16 +36,14 @@ const Navbar = () => {
       <NavSup></NavSup>
       
       <ul className={styles.opciones}>
-          <li>Inicio</li>
+          <Link to="/CoderReact/"><li>Inicio</li></Link>
           <li className="catMenuParent"><span className="fixHover" onClick={catDisplay}>Categorías <KeyboardArrowDownIcon className={styles.displayArrow} /> </span>
 
             <ul className="catMenu">
-              <li>Tecnología</li>
-              <li>Moda</li>
-              <li>Electrodomésticos</li>
-              <li>Hogar y Muebles</li>
-              <li>Herramientas</li>
-              <li>Vehículos</li>
+              <Link to="/CoderReact/tecnologia"><li>Electronics</li></Link>
+              <Link to="/CoderReact/ropahombre"><li>Men's clothing</li></Link>
+              <Link to="/CoderReact/ropamujer"><li>Women's clothing</li></Link>
+              <Link to="/CoderReact/accesorios"><li>Jewelery</li></Link>
             </ul>
           </li>
           <li>Ofertas</li>
