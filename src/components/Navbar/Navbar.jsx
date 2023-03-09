@@ -4,7 +4,7 @@ import NavSup from "./NavSup/NavSup";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({categories}) => {
   
   const [catShow,setCatShow] = useState(false);
 
@@ -40,11 +40,12 @@ const Navbar = () => {
           <li className="catMenuParent"><span className="fixHover" onClick={catDisplay}>Categorías <KeyboardArrowDownIcon className={styles.displayArrow} /> </span>
 
             <ul className="catMenu">
-              <Link to="/CoderReact/tecnologia"><li>Electronics</li></Link>
-              <Link to="/CoderReact/ropahombre"><li>Men's clothing</li></Link>
-              <Link to="/CoderReact/ropamujer"><li>Women's clothing</li></Link>
-              <Link to="/CoderReact/accesorios"><li>Jewelery</li></Link>
+              {categories.map((category)=>{
+              return<Link to={`/CoderReact/${category}`}><li>{category}</li></Link>
+              })
+              }
             </ul>
+            
           </li>
           <li>Ofertas</li>
           <li>Contacto</li>

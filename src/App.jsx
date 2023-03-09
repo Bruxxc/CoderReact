@@ -9,29 +9,50 @@ import DefaultMenu from './components/DefaultMenu/DefaultMenu'
 
 function App() {
   
-  const [productos,setProductos] = useState([]);
+  const [productos,setProductos]=useState([]);
+  const [categories,setCategories]=useState([]);
 
   const getProductos = async ()=>{
     const res= await axios.get('https://fakestoreapi.com/products');
     setProductos(res.data);
   }
 
+  const getCategories=()=>{
+    let cats=[];
+
+      productos.forEach((producto)=>{
+        if(!cats.includes(producto.category)){
+         cats.push(producto.category);
+        }
+        setCategories(cats);
+      })
+
+
+  }
+
   useEffect(()=>{
     getProductos();
   },[])
+  
+  useEffect(()=>{
+    getCategories();
+  },[productos])
 
   console.log(productos);
+  console.log(categories);
   return (
     <div className="principalDiv">
-      <Navbar></Navbar>
+      <Navbar categories={categories}></Navbar>
       <main>
         <Routes>
 
         <Route path="/CoderReact/" element={<DefaultMenu></DefaultMenu>}></Route>
-        <Route path='/CoderReact/tecnologia' element={<ItemListContainer productos={productos.filter(producto=>producto.category=="electronics")} />}></Route>
-        <Route path='/CoderReact/ropahombre' element={<ItemListContainer productos={productos.filter(producto=>producto.category=="men's clothing")} />}></Route>
-        <Route path='/CoderReact/ropamujer' element={<ItemListContainer productos={productos.filter(producto=>producto.category=="women's clothing")} />}></Route> 
-        <Route path='/CoderReact/accesorios' element={<ItemListContainer productos={productos.filter(producto=>producto.category=="jewelery")} />}></Route> 
+
+        {categories.map((category)=>{
+          return <Route path={`/CoderReact/${category}`} element={<ItemListContainer productos={productos.filter(producto => producto.category==category)} />}></Route>
+        })}
+
+
         <Route path="*" element={ <h1>404</h1> }></Route>
         <Route path="/CoderReact/item/:id" element={<ItemDetailContainer productos={productos}/>}></Route>
         </Routes>
