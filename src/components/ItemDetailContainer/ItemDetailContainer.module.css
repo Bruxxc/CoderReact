@@ -8,6 +8,8 @@
     grid-template-areas: 
     "img info"
     "desc info";
+
+    height: 500px;
 }
 
 .PreDetailImg{
