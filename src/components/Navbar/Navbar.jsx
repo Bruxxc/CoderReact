@@ -8,7 +8,7 @@ import LogContext from "../../Contexts/LogContext";
 
 const Navbar = ({categories}) => {
   
-  const {logged,setLogged}=useContext(LogContext);
+  const {logged,setLogged,loading,setLoading}=useContext(LogContext);
   const [catShow,setCatShow] = useState(false);
   const [user,setUser]=useState("");
   const [showCS,setShowCS]=useState(false);

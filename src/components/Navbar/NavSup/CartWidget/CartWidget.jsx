@@ -5,7 +5,7 @@ import CartContext from '../../../../Contexts/CartContext'
 import { Link } from 'react-router-dom'
 const CartWidget = () => {
 
-    const {carritoNum,setCarritoNum}=useContext(CartContext);
+    const {carritoNum,setCarritoNum,carritoProducts,setCarritoProducts,total,setTotal}=useContext(CartContext);
 
     return (
         <Link to={`/CoderReact/Compra`} className={styles.CartWidget}>

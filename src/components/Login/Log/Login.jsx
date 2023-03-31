@@ -6,7 +6,7 @@ import db from "../../../../db/firebase-config";
 
 const Login = () => {
   
-  const {logged,setLogged}=useContext(LogContext);
+  const {logged,setLogged,loading,setLoading}=useContext(LogContext);
   const [error,setError]=useState("");
   const [usuario,setUsuario]=useState("");
   const [contraseña,setContraseña]=useState("");

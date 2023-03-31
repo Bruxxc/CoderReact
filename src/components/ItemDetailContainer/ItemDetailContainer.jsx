@@ -8,12 +8,13 @@ import CartContext from "../../Contexts/CartContext";
 import LogContext from "../../Contexts/LogContext";
 const ItemDetailContainer = ({productos}) => {
 
-    const {logged,setLogged}=useContext(LogContext);
+    const {logged,setLogged,loading,setLoading}=useContext(LogContext);
     const { id } = useParams();
     const [producto,setProducto] = useState(productos.find((producto) => producto.id == id));
     const [cantidad,setCantidad]= useState(0);
     const {carritoNum,setCarritoNum,carritoProducts,setCarritoProducts,total,setTotal}=useContext(CartContext);
-
+   
+    
     const agregarAlCarrito=(cantidad)=>{
       if(!logged){
         Swal.fire("Debes iniciar sesión para agregar al carrito").then(()=>{window.location.href="/CoderReact/Login";});

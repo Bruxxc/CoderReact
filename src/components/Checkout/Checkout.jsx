@@ -10,7 +10,7 @@ import { addDoc, collection } from "firebase/firestore";
 const Checkout = () => {
 
 
-  const {logged,setLogged}=useContext(LogContext);
+  const {logged,setLogged,loading,setLoading}=useContext(LogContext);
   const {carritoNum,setCarritoNum,carritoProducts,setCarritoProducts,total,setTotal}=useContext(CartContext);
   const ordersCollectionRef=collection(db,"orders");
   const [user,setUser]=useState("");

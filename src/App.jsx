@@ -22,7 +22,11 @@ function App() {
   const itemsCollectionRef = collection(db,"items");
   const usersCollectionRef=collection(db,"users");
 
-/*CARRITO*/
+
+  /*LOADING*/
+  const [loading,setLoading]=useState(true);
+
+  /*CARRITO*/ 
   
   const [carritoProducts,setCarritoProducts]=useState([]);
   const [carritoNum,setCarritoNum]=useState(0);
@@ -33,7 +37,9 @@ function App() {
     const itemsCollection = await getDocs(itemsCollectionRef);
     setItems(
       itemsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-    );
+    )
+    setLoading(false);
+    ;
   };
 
  
@@ -63,7 +69,7 @@ function App() {
 
   return (
     <CartContext.Provider value={{carritoNum,setCarritoNum,carritoProducts,setCarritoProducts,total,setTotal}}>
-      <LogContext.Provider value={{logged,setLogged}}>
+      <LogContext.Provider value={{logged,setLogged,loading,setLoading}}>
         <div className="principalDiv">
                   
           <Navbar categories={categories}></Navbar>
@@ -72,6 +78,7 @@ function App() {
 
               <Routes>
 
+              
               <Route path="/CoderReact/" element={<DefaultMenu productos={items}/>}></Route>
 
               {categories.map((category)=>{
