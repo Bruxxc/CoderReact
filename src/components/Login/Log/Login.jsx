@@ -3,6 +3,7 @@ import styles from "./Login.module.css"
 import LogContext from "../../../Contexts/LogContext";
 import { collection, getDocs } from 'firebase/firestore'
 import db from "../../../../db/firebase-config";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   
@@ -11,7 +12,7 @@ const Login = () => {
   const [usuario,setUsuario]=useState("");
   const [contraseña,setContraseña]=useState("");
   const [permanecer,setPermanecer]=useState(false);
-  
+  const navigate = useNavigate();
   
   /*USUARIO*/
   const [users,setUsers]= useState([]);
@@ -54,7 +55,7 @@ const Login = () => {
           title: `Bienvenido ${usuario} `,
         }).then(()=>{
           setLogged(true);
-          window.location.replace("/CoderReact/");
+          navigate("/CoderReact/");
         });
       }
 

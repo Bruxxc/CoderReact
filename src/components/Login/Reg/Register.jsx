@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import { addDoc } from "firebase/firestore"
 import { collection, getDocs } from 'firebase/firestore'
 import db from "../../../../db/firebase-config"
+import { useNavigate } from "react-router-dom"
 
 const Register = () => {
   const [email,setEmail]=useState("");
@@ -11,7 +12,7 @@ const Register = () => {
   const [contraseña,setContraseña]=useState("");
   const [rcontraseña,setRContraseña]=useState("");
   const [error,setError]=useState();
-
+  const navigate = useNavigate();
   /*USUARIO*/
   const [users,setUsers]= useState([]);
   const usersCollectionRef=collection(db,"users");
@@ -43,7 +44,7 @@ const Register = () => {
       icon: 'success',
       title: 'Usuario registrado con éxito',
     }).then(()=>{
-      window.location.replace("/CoderReact/Login");
+      navigate("/CoderReact/Login");
     });})
 
   }

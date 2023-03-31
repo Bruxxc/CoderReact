@@ -6,6 +6,7 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import LogContext from "../../Contexts/LogContext";
 import db from "../../../db/firebase-config";
 import { addDoc, collection } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
 
@@ -14,8 +15,7 @@ const Checkout = () => {
   const {carritoNum,setCarritoNum,carritoProducts,setCarritoProducts,total,setTotal}=useContext(CartContext);
   const ordersCollectionRef=collection(db,"orders");
   const [user,setUser]=useState("");
-
-
+  const navigate = useNavigate();
   ///REDONDEAR///
   const redondear=(num)=>{
     return (Math.trunc(num*100)/100);
@@ -44,7 +44,7 @@ const Checkout = () => {
 
     else{
       swal.fire("Debes iniciar sesión para acceder al carrito").then(()=>{
-        window.location.replace("/CoderReact/Login");
+        navigate( "/CoderReact/Login");
       });
     }
   };
@@ -72,7 +72,7 @@ const enviarOrden= async (orden)=>{
     title: 'Compra realizada con éxito',
   }).then(()=>{
     vaciarCarrito();
-    window.location.href="./";
+    navigate( "/CoderReact/");
   });})
 }
 
@@ -89,7 +89,7 @@ const enviarOrden= async (orden)=>{
         title: 'Debes iniciar sesión para continuar',
         confirmButtonText: 'OK',
       }).then(() => {
-        window.location.href="./Login";
+        navigate("/CoderReact/Login")
        })
     }
 

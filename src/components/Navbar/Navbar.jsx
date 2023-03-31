@@ -30,6 +30,8 @@ const Navbar = ({categories}) => {
         setUser(data);
         console.log(data);
       }
+
+      console.log(user);
     }
   };
 
@@ -136,6 +138,7 @@ const logout=()=>{
         <div className={styles.interfazUsuario}>
 
         <KeyboardArrowDownIcon className={styles.userArrow}/>
+        
         <p onClick={CSDisplay} >{user.usuario}</p>
       
         <ul className="cerrarSesion">
