@@ -2,10 +2,10 @@
     padding-top: 5px;
     height: 50px;
     display: grid;
-    grid-template-columns: 2fr 7fr 3fr;
+    grid-template-columns: 2fr 7fr 3fr 1fr;
     grid-template-areas: 
-    "logo search cart";
-    padding-left: 50px;
+    "logo search cart user";
+    padding-left: 80px;
     grid-area:sup;
     align-items: center;
 }

@@ -47,14 +47,14 @@
 }
 
 .productName{
-    color:rgb(113, 121, 120);
+    color:#101111;
     text-align: center;
     height: 40px;
     font-size:small;
 }
 
 .productPrice{
-    color:green;
+    color:#D74E09;
     font-weight: 500;
     height: 20px;
     justify-self: center;

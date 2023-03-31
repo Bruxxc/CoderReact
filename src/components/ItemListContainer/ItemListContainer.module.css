@@ -5,7 +5,7 @@
     align-content: start;
 }
 .ItemListContainer h1{
-    color: #2780c0;
+    color: #101111;
 }
 
 .ProductList{
@@ -21,4 +21,23 @@
     justify-content:left;
     justify-self: center;
     width: 948px;
+}
+
+
+@media (max-width:965px){
+    .ProductListSub{
+        width: 700px;
+    }
+}
+
+@media (max-width:725px){
+    .ProductListSub{
+        width: 460px;
+    }
+}
+
+@media (max-width:470px){
+    .ProductListSub{
+        width: 230px;
+    }
 }

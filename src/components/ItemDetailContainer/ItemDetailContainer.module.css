@@ -45,23 +45,63 @@
     display: grid;
     padding: 10px;
     padding-top: 0px;
+    height: 500px;
 }
 
 .precio{
-    color:#357021;
+    color:#D74E09;
 }
+
+
 
 h6{
     color: #2780c0;
     align-self: start;
 }
 
+.infoSub{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    align-items: start;
+}
+
+.cantidadContainer{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.cantidadInput{
+    width: 40px;
+    height: 20px;
+}
 
 .productDescription{
     grid-area:desc;
     color:#585454;
     font-weight: 300;
     font-size: 15px;
-    padding:10px
+    padding:10px;
+    overflow: auto;
+    
+}
+
+.cartButton{
+    width: 100%;
+    color: #2780c0;
+    margin-top: 10px;
+    border:#2780c0 1px solid;
+    font-size: 17px;
+    font-weight:600;
+    line-height: 44px;
+    height: 44px;
+    border-radius: 3px;
+    background-color: #f0eded;
+
+}
+
+.cartButton:hover{
+    filter: brightness(110%);
+    cursor: pointer;
 }
 

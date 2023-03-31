@@ -23,7 +23,6 @@ main{
   list-style:none;
   background-color: rgba(51,51,51,.9);
   width: 150px;
-  margin-top: 4px;
 }
 
 .catMenu li{
@@ -53,4 +52,24 @@ main{
   display: grid;
   justify-items: center;
   font-family: 'Righteous', cursive;
+}
+
+.cerrarSesion{
+  position: absolute;
+  list-style-type: none;
+  margin-top: 100px;
+  background-color: rgba(51,51,51,.9);
+  width: 150px;
+  display: grid;
+  justify-content: center;
+  color:aliceblue;}
+
+.cerrarSesion:hover{
+  background-color: #2780c0;
+  cursor:pointer;
+  }
+
+.cerrarSesion:hover li{
+  color:aliceblue;
+
 }

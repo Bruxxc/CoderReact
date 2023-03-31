@@ -1,0 +1,90 @@
+.logContainer{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_formulario{
+    display: grid;
+    justify-items: center;
+    width: 400px;
+    height: 365px;
+    background-color: #e7ebe7;
+    box-shadow: #0D160B 0px 0px 10px;
+}
+
+
+.login_formulario fieldset{
+    height: 300px;
+    width: inherit;
+    display: grid;
+    border:none;
+}
+
+.login_formulario p{
+    color:#2780c0;
+}
+
+.login_formulario button{
+    margin-top: 10px;
+    width: 92%;
+    color: #fff;
+    background:#2780c0;
+    font-size: 17px;
+    font-weight:600;
+    line-height: 44px;
+    height: 44px;
+    border-radius: 3px;
+    border:none;
+    margin-right: 10px;
+    justify-self: center;
+}
+
+.login_formulario button:hover{
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
+.login_formulario div{
+    height: 100px;
+    justify-self: center;
+    width: 100%;
+}
+.login_formulario div p{
+    height: 25px;
+    color:rgb(199, 58, 58);
+}
+
+.form_element{
+    padding-left: 5px;
+    display: grid;
+    height: 60px;
+    
+}
+
+.form_element input{
+    justify-self: start;
+    width: 95%;
+    height: 28px;
+
+}
+
+.form_element input:focus{
+    color:#2780c0;
+    box-shadow: #2780c0 0px 0px 3px;
+    border:#2780c0 solid;
+    outline: #2780c0;
+}
+
+.pconectado{
+    padding-left: 5px;
+    font-size: small;
+}
+
+.log_advertencia{
+    color:red !important;
+    position: absolute;
+    align-self: end;
+    justify-self: center;
+}

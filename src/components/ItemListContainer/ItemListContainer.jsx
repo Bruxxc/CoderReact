@@ -10,8 +10,9 @@ const ItemListContainer = ({productos}) => {
     <h1>{productos[0].category}</h1>
     <div className={styles.ProductList}>
     <div className={styles.ProductListSub}>
-      {productos.map((producto)=>{
-            return<ProductCard key={producto.id} producto={producto}/>
+      
+      {productos.map((product)=>{
+            return<ProductCard key={product.id} producto={product}/>
         })
         }
 

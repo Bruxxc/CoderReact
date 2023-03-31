@@ -1,5 +1,5 @@
 .Navbar{
-    background-color: #F2BB05;
+    background-color: #1a181b;
     font-weight: 700;
     margin: 0;
     height: 110px;
@@ -9,20 +9,22 @@
     grid-template-areas: 
     "sup sup"
     "op user";
-    color:aliceblue;
+    color:#EFF9F0;
 }
 
 .Navbar a{
-    color:aliceblue;
+    color:#EFF9F0;
 }
 
 .opciones{
     display: flex;
     list-style: none;
-    width: 400px;
+    width: 200px;
     justify-content: space-around;
     grid-area: op;
-    padding-left: 45px;
+    padding-left: 70px;
+    margin-top: 20px;
+    column-gap: 20px;
 }
 
 .user{
@@ -45,3 +47,37 @@ li:hover{
     justify-self: center;
     align-self: flex-end;
 }
+
+.interfazUsuario{
+    display: grid;
+    height: 30px;
+    width: fit-content;
+    justify-items: center;
+    align-items: center;
+    margin-top: 15px;
+    justify-self: center;
+}
+
+.interfazUsuario:hover{
+    cursor:pointer;
+}
+
+.interfazUsuario:hover .userArrow{
+    color:#D74E09;
+
+}
+
+.interfazUsuario:hover p{
+    color:#D74E09;
+}
+
+.interfazUsuario p{
+    width: fit-content;
+    position: absolute;
+}
+
+.userArrow{
+    margin-top: 20px;
+}
+
+

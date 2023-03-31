@@ -2,3 +2,41 @@
     text-decoration: none;
     color: #D74E09;
 }
+.ItemListContainer{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+}
+.ProductList{
+    width: 100%;
+    display: grid;
+}
+
+.ProductListSub{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 20px;
+    justify-content:left;
+    justify-self: center;
+    width: 948px;
+}
+
+@media (max-width:965px){
+    .ProductListSub{
+        width: 700px;
+    }
+}
+
+@media (max-width:725px){
+    .ProductListSub{
+        width: 460px;
+    }
+}
+
+@media (max-width:470px){
+    .ProductListSub{
+        width: 230px;
+    }
+}
