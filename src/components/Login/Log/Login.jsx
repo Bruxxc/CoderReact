@@ -54,7 +54,7 @@ const Login = () => {
           title: `Bienvenido ${usuario} `,
         }).then(()=>{
           setLogged(true);
-          window.location.href="./";
+          window.location.replace("/CoderReact/");
         });
       }
 

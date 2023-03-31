@@ -44,7 +44,7 @@ const Checkout = () => {
 
     else{
       swal.fire("Debes iniciar sesión para acceder al carrito").then(()=>{
-        window.location.href="/CoderReact/Login";
+        window.location.replace("/CoderReact/Login");
       });
     }
   };

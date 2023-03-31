@@ -43,7 +43,7 @@ const Register = () => {
       icon: 'success',
       title: 'Usuario registrado con éxito',
     }).then(()=>{
-      window.location.href="./Login";
+      window.location.replace("/CoderReact/Login");
     });})
 
   }
