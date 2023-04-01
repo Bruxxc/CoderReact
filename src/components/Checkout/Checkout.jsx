@@ -78,6 +78,16 @@ const enviarOrden= async (orden)=>{
   }).then(()=>{
     let nuevo=user;
     nuevo.orders.push(orden);
+    let nuevo_str=JSON.stringify(nuevo);
+    
+    if("usuario_actual" in localStorage){
+      localStorage.setItem("usuario_actual",nuevo_str);
+    }
+
+    else if ("usuario_actual" in sessionStorage){
+      sessionStorage.setItem("usuario_actual",nuevo_str);
+    }
+    console.log(nuevo_str);
     setDoc(doc(db,"users",user.id),{
       usuario:nuevo.usuario,
       contraseña:nuevo.contraseña,
