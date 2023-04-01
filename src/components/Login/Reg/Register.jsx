@@ -39,6 +39,7 @@ const Register = () => {
       contraseña:contraseña,
       email:email,
       usuario:usuario,
+      orders:[],
     }).then(()=>{
       Swal.fire({
       icon: 'success',

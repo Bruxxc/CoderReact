@@ -12,6 +12,7 @@ import LogContext from './Contexts/LogContext';
 import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Log/Login';
 import Register from './components/Login/Reg/Register';
+import Historial from './components/Historial/Historial';
 
 function App() {
   
@@ -90,6 +91,7 @@ function App() {
               <Route path="/CoderReact/Compra" element={<Checkout/>}></Route>
               <Route path="/CoderReact/Login" element={<Login />}></Route>
               <Route path="/CoderReact/Register" element={<Register/>} ></Route>
+              <Route path='/CoderReact/Historial' element={<Historial></Historial>}></Route>
               </Routes>
               
             </main>

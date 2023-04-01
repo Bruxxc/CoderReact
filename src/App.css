@@ -54,22 +54,28 @@ main{
   font-family: 'Righteous', cursive;
 }
 
-.cerrarSesion{
+.user_menu{
   position: absolute;
   list-style-type: none;
-  margin-top: 100px;
+  margin-top: 124px;
   background-color: rgba(51,51,51,.9);
   width: 150px;
   display: grid;
   justify-content: center;
   color:aliceblue;}
 
-.cerrarSesion:hover{
+  .user_menu li{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+
+.user_menu li:hover{
   background-color: #2780c0;
   cursor:pointer;
   }
 
-.cerrarSesion:hover li{
+.user_menu:hover li{
   color:aliceblue;
 
 }

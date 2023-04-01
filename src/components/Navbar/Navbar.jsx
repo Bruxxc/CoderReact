@@ -4,10 +4,11 @@ import NavSup from "./NavSup/NavSup";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from "react-router-dom";
 import LogContext from "../../Contexts/LogContext";
-
+import { useNavigate } from "react-router-dom"
 
 const Navbar = ({categories}) => {
   
+  const navigate = useNavigate();
   const {logged,setLogged,loading,setLoading}=useContext(LogContext);
   const [catShow,setCatShow] = useState(false);
   const [user,setUser]=useState("");
@@ -39,7 +40,7 @@ const Navbar = ({categories}) => {
 
   useEffect(() => {
     getUser();
-  },[]);
+  },[logged]);
 
 /***********************************************************************/
 
@@ -53,7 +54,7 @@ const logout=()=>{
   sessionStorage.removeItem("usuario_actual");
   }
   setLogged(false);
-
+  navigate("/CoderReact/");
 }
 
 
@@ -87,18 +88,21 @@ const logout=()=>{
 
 //MOSTRAR CERRAR SESIÓN ******************************************//
   const CSDisplay= ()=>{
-    if (showCS){
-      setShowCS(false);
+    if(logged){
+      if (showCS){
+        setShowCS(false);
+      }
+  
+      else{
+        setShowCS(true);
+      }
     }
 
-    else{
-      setShowCS(true);
-    }
   }
 
   useEffect(()=>{
     if (logged){
-    let menu=document.querySelector(".cerrarSesion");
+    let menu=document.querySelector(".user_menu");
     
     if(showCS){
       menu.style.display="grid";
@@ -109,7 +113,6 @@ const logout=()=>{
     }}
   },[showCS]);
 /*********************************************************************/
-
 
   return (
     <nav className={styles.Navbar}>
@@ -139,9 +142,10 @@ const logout=()=>{
 
         <KeyboardArrowDownIcon className={styles.userArrow}/>
         
-        <p onClick={CSDisplay} >{user.usuario}</p>
+        <p onClick={CSDisplay}> {user.usuario} </p>
       
-        <ul className="cerrarSesion">
+        <ul className="user_menu">
+          <Link to={"/CoderReact/Historial"}><li>Historial de compra</li></Link>
           <li onClick={logout}>Cerrar Sesión</li>
         </ul>
         

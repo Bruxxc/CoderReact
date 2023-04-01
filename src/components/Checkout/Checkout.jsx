@@ -5,8 +5,9 @@ import ItemCheckout from "./ItemCheckout/ItemCheckout"
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import LogContext from "../../Contexts/LogContext";
 import db from "../../../db/firebase-config";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+
 
 const Checkout = () => {
 
@@ -14,14 +15,18 @@ const Checkout = () => {
   const {logged,setLogged,loading,setLoading}=useContext(LogContext);
   const {carritoNum,setCarritoNum,carritoProducts,setCarritoProducts,total,setTotal}=useContext(CartContext);
   const ordersCollectionRef=collection(db,"orders");
-  const [user,setUser]=useState("");
+    /*USUARIOS*/
+    const [user,setUser]=useState("");
+  
   const navigate = useNavigate();
-  ///REDONDEAR///
+
+
+
+///REDONDEAR///
   const redondear=(num)=>{
     return (Math.trunc(num*100)/100);
   }
 /************************************/
-
 
 
 ///////////////////OBTENER USUARIO/////////////////////////////////////
@@ -71,6 +76,14 @@ const enviarOrden= async (orden)=>{
     icon: 'success',
     title: 'Compra realizada con éxito',
   }).then(()=>{
+    let nuevo=user;
+    nuevo.orders.push(orden);
+    setDoc(doc(db,"users",user.id),{
+      usuario:nuevo.usuario,
+      contraseña:nuevo.contraseña,
+      email:nuevo.email,
+      orders:nuevo.orders,
+    })
     vaciarCarrito();
     navigate( "/CoderReact/");
   });})

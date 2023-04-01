@@ -27,8 +27,13 @@ const Login = () => {
   
   const login=(e)=>{
     e.preventDefault();
-    console.log(usuario,contraseña,permanecer);
     let CheckUser=users.filter(user=>(user.usuario==usuario));
+    
+    users.forEach(user => {
+      console.log(user)
+    });
+
+    
     if(CheckUser.length==0){
       setError("usuario o contraseña incorrectos");
     }
@@ -65,7 +70,7 @@ const Login = () => {
 
   useEffect(() => {
     getUsers();
-  }, )
+  }, [])
 
   return (
     <div className={styles.logContainer}>
