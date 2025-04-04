@@ -46,7 +46,7 @@ const ItemDetailContainer = ({productos}) => {
     <div className={styles.ItemDetailContainer}>
     <div className={styles.PreDetailImg}>
       <div className={styles.DetailImg}>
-        <img src={producto.image} alt="" width={200} />
+        <img src={producto.image} alt="imagen_producto" width={200} />
       </div>
     </div>
 
@@ -55,11 +55,11 @@ const ItemDetailContainer = ({productos}) => {
       <h3>{producto.title}</h3>
       <h2 className={styles.precio}>U$S {producto.price}</h2>
       <div className={styles.infoSub}>
-      <Rating score={producto.rating.rate}></Rating>
+      <Rating className={styles.rating} score={producto.rating.rate}></Rating>
 
       <div className={styles.cantidadContainer}>
 
-        <p>Cantidad</p> <input type="number" value={cantidad} min={0} onChange={e=>{setCantidad(e.target.value)}} className={styles.cantidadInput}/>
+        <p className={styles.Cantidad}> Cantidad :</p> <input type="number" value={cantidad} min={0} onChange={e=>{setCantidad(e.target.value)}} className={styles.cantidadInput}/>
 
       </div>
       

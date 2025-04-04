@@ -6,7 +6,7 @@ const Rating = ({score}) => {
 
   return (
     <div className={styles.rating}>
-        <p>Rating: {score}</p>
+        <p><span className={styles.ratingText}>Rating :</span> <span className={styles.score}>{score}</span></p>
 
             <div className={styles.StarsBorder}>
             <StarBorderIcon className={styles.ratingStarBorder}></StarBorderIcon>

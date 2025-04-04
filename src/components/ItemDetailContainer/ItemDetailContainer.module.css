@@ -48,6 +48,10 @@
     height: 500px;
 }
 
+.productInfo h3{
+    color:#1a181b;
+}
+
 .precio{
     color:#D74E09;
 }
@@ -105,3 +109,6 @@ h6{
     cursor: pointer;
 }
 
+.Cantidad{
+    color:#585454;
+}

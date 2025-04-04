@@ -8,6 +8,11 @@
     justify-items: center;
     align-content: start;
 }
+
+.ItemListContainer h1{
+    color:#0e6ba8 !important;
+}
+
 .ProductList{
     width: 100%;
     display: grid;
