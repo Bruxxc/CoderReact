@@ -7,7 +7,6 @@
     width: 80%;
     justify-self: center;
     align-self: flex-end;
-    box-shadow: 0px 0px 2px black;
     grid-area:search;
 }
 
@@ -16,6 +15,7 @@
     margin-left: 1%;
     width: 89%;
     height: 80%;
+    background-color: unset !important;
 }
 
 .Buscador input::placeholder{
