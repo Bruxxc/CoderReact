@@ -2,7 +2,7 @@ import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { useEffect,useState } from 'react'
 import './assets/App.css'
-import { Route,Routes } from 'react-router-dom';
+import { Route,Routes,Navigate } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import DefaultMenu from './components/DefaultMenu/DefaultMenu';
 import db from '../db/firebase-config';
@@ -79,7 +79,7 @@ function App() {
 
               <Routes>
 
-              
+              <Route path="/" element={<Navigate to="/CoderReact" replace />} />
               <Route path="/CoderReact/" element={<DefaultMenu productos={items}/>}></Route>
 
               {categories.map((category)=>{
