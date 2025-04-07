@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { useEffect,useState } from 'react'
-import './App.css'
+import './assets/App.css'
 import { Route,Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import DefaultMenu from './components/DefaultMenu/DefaultMenu';
